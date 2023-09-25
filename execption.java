@@ -1,11 +1,11 @@
 public class execption {
     public static void main(String args[]) {
-        int j = 0;
+        int j = 1000;
         int arr[] = new int[5];
         try {
             // System.out.println(arr[5]);
             int i = 10 / j;
-            if (j == 0)
+            if (i == 0)
                 throw new ArithmeticException("cant divide by zero");
             System.out.println("Not printed");
 
