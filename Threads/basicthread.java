@@ -12,10 +12,15 @@ class print implements Runnable {// insted of using extends its better to use in
 }
 
 class db extends Thread {
+    public db(String st) {// calling the super calss constructor of thread class
+        super(st);
+    }
+
     public void run() {// if run method is not being provided then ob1.start() will not be executed
                        // since no run method is present in db class
         for (int i = 1; i < 6; i++) {
-            System.out.println("updating db");
+            System.out.println("updating db " + Thread.currentThread());// To get full thread name use
+                                                                        // Thread.currentThread().getName()
             try {
                 Thread.sleep(2000);
             } catch (InterruptedException e) {
@@ -27,7 +32,7 @@ class db extends Thread {
 public class basicthread {
     public static void main(String args[]) {
         print ob = new print();
-        db ob1 = new db();
+        db ob1 = new db("Vinesh Db");
         Thread t = new Thread(ob);// if implemented then create a object for thread class and link the relation
                                   // between the class object and thread class by passing it to the constructor
         t.start();
