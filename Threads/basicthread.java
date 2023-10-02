@@ -12,7 +12,8 @@ class print implements Runnable {// insted of using extends its better to use in
 }
 
 class db extends Thread {
-    public void run() {
+    public void run() {// if run method is not being provided then ob1.start() will not be executed
+                       // since no run method is present in db class
         for (int i = 1; i < 6; i++) {
             System.out.println("updating db");
             try {
