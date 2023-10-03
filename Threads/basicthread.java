@@ -39,3 +39,19 @@ public class basicthread {
         ob1.start();
     }
 }
+// Q)why we are passing object to thread class while only implementing it?
+/*
+ * If we look into the definetion of the thread class since it implements the
+ * runnable interface
+ * so it must have provided an implementation of the run method so according to
+ * that implementation
+ * there is a instance named task(in my case) of runnable class which calls the
+ * run only if task is not null
+ * so to make the task as not null we have to pass object of runnable interface
+ * to the constructor of the thread class
+ * ...................
+ * but while extending we actually override the run method and assigining
+ * the(instantiationing our own class)
+ * class instance to the thread
+ * class and calling the start method
+ */
