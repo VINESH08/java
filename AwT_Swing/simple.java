@@ -1,8 +1,6 @@
 
 import java.awt.*;
 
-import java.util.concurrent.Flow;
-
 class simple extends Frame {
     simple() {
         // without inheriting we can write like: Frame frame=new Frame();
