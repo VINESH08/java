@@ -28,9 +28,10 @@ public class SavingsAccount extends BankAccount implements Transaction {
     public double withdraw(double money) throws InsufficientFundsException, InvalidAmountException {
         if (balance < money)
             throw new InsufficientFundsException("Insufficient balance!!");
-        else if (money <= 0)
+        else if (money <= 0) {
             throw new InvalidAmountException("The money value must be greater than zero");
-
+            // System.out.println("hi");
+        }
         balance -= money;
         return balance;
     }

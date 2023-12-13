@@ -29,7 +29,7 @@ class Employee extends EmployeeData {
 
     public void getdetails() {
         System.out.println("enter the da%:");
-        super.da = in.nextInt();
+        da = in.nextInt();
         System.out.println("enter the hra%:");
         super.hra = in.nextInt();
         System.out.println("enter the pf%:");

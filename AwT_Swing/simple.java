@@ -20,7 +20,7 @@ class simple extends Frame {
         choice.add("SouthAfrica");
         add(choice);
         add(checkbox);
-        setLayout(new FlowLayout());// used to arrange the components side by side if null is not given go for
+        setLayout(new GridLayout());// used to arrange the components side by side if null is not given go for
         // setbounds(4 parameters)
         add(textArea);
         add(textField);

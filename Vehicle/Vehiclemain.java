@@ -12,12 +12,7 @@ public class Vehiclemain {
             String vin, model;
             int yom;
             int choice;
-            System.out.println("Enter the Vehicle identity number: ");
-            vin = in.next();
-            System.out.println("Enter the Model of the vehicle");
-            model = in.next();
-            System.out.println("Enter the year of manufacture:");
-            yom = in.nextInt();
+
             do {
 
                 // int choice;
@@ -29,7 +24,12 @@ public class Vehiclemain {
                 int choice2 = in.nextInt();
                 switch (choice) {
                     case 1:
-
+                        System.out.println("Enter the Vehicle identity number: ");
+                        vin = in.next();
+                        System.out.println("Enter the Model of the vehicle");
+                        model = in.next();
+                        System.out.println("Enter the year of manufacture:");
+                        yom = in.nextInt();
                         System.out.println("Enter the number of doors");
                         int door = in.nextInt();
                         Car car = new Car(vin, model, choice, door);
@@ -39,6 +39,12 @@ public class Vehiclemain {
                             car.returnVehicle();
                         break;
                     case 2:
+                        System.out.println("Enter the Vehicle identity number: ");
+                        vin = in.next();
+                        System.out.println("Enter the Model of the vehicle");
+                        model = in.next();
+                        System.out.println("Enter the year of manufacture:");
+                        yom = in.nextInt();
 
                         System.out.println("Enter the Engine capacity");
                         int Enginecap = in.nextInt();
@@ -49,7 +55,12 @@ public class Vehiclemain {
                             mc.returnVehicle();
                         break;
                     case 3:
-
+                        System.out.println("Enter the Vehicle identity number: ");
+                        vin = in.next();
+                        System.out.println("Enter the Model of the vehicle");
+                        model = in.next();
+                        System.out.println("Enter the year of manufacture:");
+                        yom = in.nextInt();
                         System.out.println("Enter the cargocapacity");
                         int cargocap = in.nextInt();
                         Truck truck = new Truck(vin, model, yom, cargocap);

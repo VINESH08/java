@@ -38,6 +38,7 @@ class TrainTicket extends JFrame implements ActionListener {
     JRadioButton maleRadio, femaleRadio;
     JComboBox<String> berthPreferenceBox;
     JTextArea outputArea;
+    JButton submitButton;
 
     TrainTicket() {
 
@@ -66,7 +67,7 @@ class TrainTicket extends JFrame implements ActionListener {
 
         outputArea = new JTextArea(10, 30);
         JScrollPane scrollPane = new JScrollPane(outputArea);
-        JButton submitButton = new JButton("Submit");
+        submitButton = new JButton("Submit");
         submitButton.addActionListener(this);
 
         add(nameLabel);
@@ -86,7 +87,7 @@ class TrainTicket extends JFrame implements ActionListener {
     }
 
     public void actionPerformed(ActionEvent e) {
-        if (e.getActionCommand().equals("Submit")) {
+        if (e.getSource() == submitButton) {
 
             validateInput();
 
@@ -117,4 +118,5 @@ class Train {
     public static void main(String[] args) {
         TrainTicket a = new TrainTicket();
     }
+
 }

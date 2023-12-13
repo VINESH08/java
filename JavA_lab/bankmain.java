@@ -54,7 +54,6 @@ class Customer {
         name = in.nextLine();
         System.out.println("enter your id:");
         cust_id = in.nextInt();
-
         System.out.println("enter your address:");
         address = in.next();
         System.out.println("enter your account number:");
@@ -95,8 +94,10 @@ class bankmain {
             cus[i] = new Customer();
             System.out.println("enter the amount to withdraw or deposit");
             mone = in.nextDouble();
+
             cus[i].getdetails();
             cus[i].calculate(mone);
+
         }
 
     }

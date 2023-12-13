@@ -1,18 +1,24 @@
 import java.awt.*;
 import java.awt.event.*;
+import javax.swing.*;
 
 class form {
     form() {
-        Frame frame = new Frame("Form");
 
-        Label Emaillabel = new Label("Email");
+        JFrame frame = new JFrame("Form");
+        frame.addWindowListener(new WindowAdapter() {
+            public void windowClosing(WindowEvent e) {
+                System.exit(0);
+            }
+        });
+        JLabel Emaillabel = new JLabel("Email");
         Emaillabel.setBounds(100, 50, 100, 30);
         TextField emailField = new TextField("Enter your mail");
         emailField.setBounds(270, 50, 200, 30);
 
-        Label Passwordlabel = new Label("Password");
+        JLabel Passwordlabel = new JLabel("Password");
         Passwordlabel.setBounds(100, 90, 100, 30);
-        TextField passField = new TextField("Enter your password");
+        JPasswordField passField = new JPasswordField();
         passField.setBounds(270, 90, 200, 30);
 
         Label ageLabel = new Label("Age");
@@ -21,6 +27,21 @@ class form {
         ageField.setBounds(270, 130, 200, 30);
         Button btn = new Button("Submit");
         btn.setBounds(195, 200, 100, 40);
+
+        JCheckBox ch = new JCheckBox("C++");
+        ch.setBounds(100, 150, 70, 30);
+        frame.add(ch);
+        JCheckBox ch2 = new JCheckBox("Java");
+        ch2.setBounds(180, 150, 70, 30);
+        frame.add(ch2);
+        ch.addItemListener(new ItemListener() {
+            public void itemStateChanged(ItemEvent e) {
+                if (ch.isSelected())
+                    System.out.println("Selected C++");
+                else
+                    System.out.println("Deselected c++");
+            }
+        });
         btn.addActionListener(new ActionListener() {// action listiner is a interface
             public void actionPerformed(ActionEvent e) { // Corrected to ActionEvent
                 // Your code here

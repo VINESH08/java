@@ -56,7 +56,7 @@ class vehicle extends car {
 
     void print() {
         // super.print();
-        System.out.println("hi");
+        System.out.println("hi vinesh iam from vehicle class");
         super.print();
     }
 }
@@ -64,10 +64,11 @@ class vehicle extends car {
 class inheritance {
     public static void main(String args[]) {
         vehicle v = new vehicle("BMW", "X1", "sprtive", 2023, "BrV");
-
-        v.details();
-        v.print();
+        car c = new vehicle("Bmw", "F", "Sport", 2023, "Brv");
+        c.print();
+        // v.details();
         // v.print();
-        v.printdetails();
+        // v.print();
+        // v.printdetails();
     }
 }

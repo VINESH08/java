@@ -33,11 +33,12 @@ public class basicthread {
     public static void main(String args[]) {
         print ob = new print();
         db ob1 = new db("Vinesh Db");
-        Thread t = new Thread(new print());// if implemented then create a object for thread class and link the relation
-        Thread t2 = new Thread(ob1); // between the class object and thread class by passing it to the constructor
+        Thread t = new Thread(ob);// if implemented then create a object for thread class and link the relation
+        // Thread t2 = new Thread(ob1); // between the class object and thread class by
+        // passing it to the constructor
         t.start();
         // ob1.start();
-        t2.start();
+        ob1.start();
 
     }
 }

@@ -31,11 +31,14 @@ public class Calculator extends Frame {
         });
         Button sub = new Button("Sub");
         sub.setBounds(160, 150, 90, 30);
+
         sub.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 int n1 = Integer.parseInt(num1.getText());
                 int n2 = Integer.parseInt(num2.getText());
                 dispresult.setText(String.valueOf(n1 - n2));
+                setBackground(Color.BLACK);
+
             }
         });
 
@@ -70,6 +73,7 @@ public class Calculator extends Frame {
         add(dispresult);
         setSize(500, 500);
         setLayout(null);
+        // setBackground(Color.BLUE);
         setVisible(true);
 
     }
